@@ -21,6 +21,12 @@ public class Exercises {
       return -1;
     }
 
+    for (int i = 0; i < list.size(); i++) {
+      if (list.get(i) == target) {
+        return i;
+      }
+    }
+
     
   public int findMeFaster(ArrayList<Integer> list, int target) {
     return -1;
