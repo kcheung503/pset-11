@@ -6,6 +6,14 @@ public class Exercises {
     if (list == null || list.length == 0) {
       return -1;
     }
+
+    for (int i = 0; i < list.length; i++) {
+      if (list[i] == target) {
+        return i;
+      }
+    }
+
+  return -1;
   }
 
   public int findMe(ArrayList<String> list, String target) {
