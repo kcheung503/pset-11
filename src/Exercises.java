@@ -38,6 +38,13 @@ public class Exercises {
       return -1;
     }
 
+    boolean isFound = false;
+    int start = 0;
+    int end = list.size();
+
+    while (!isFound) {
+      int midpoint = (start+end)/2;
+
 //Exercise 4
   public int findMeFaster(String[] list, String target) {
     return -1;
