@@ -45,6 +45,19 @@ public class Exercises {
     while (!isFound) {
       int midpoint = (start+end)/2;
 
+    if (list.get(midpoint) == target) {
+        return midpoint;
+      } else if (list.get(midpoint) < target) {
+        end = midpoint;
+      } else if (list.get(midpoint) > target) {
+        start = midpoint;
+      }
+
+    }
+
+    return -1;
+  }
+
 //Exercise 4
   public int findMeFaster(String[] list, String target) {
     return -1;
