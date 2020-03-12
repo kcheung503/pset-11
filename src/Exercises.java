@@ -71,7 +71,20 @@ public class Exercises {
     while (!isFound) {
       int midpoint = (start + end) / 2;
 
-    
+    if (list[midpoint].equals(target)) {
+        return midpoint;
+      } else if (list[midpoint].compareTo(target) < 0) {
+        end = midpoint;
+      } else if (list[midpoint].compareTo(target) > 0) {
+        start = midpoint;
+      }
+
+    }
+
+
+    return -1;
+  }
+
 //Exercise 5
   public int[] bubble(int[] list, boolean ascending) {
     return null;
