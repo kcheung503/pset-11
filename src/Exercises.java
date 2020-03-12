@@ -34,8 +34,9 @@ public class Exercises {
 
 //Exercise 3
   public int findMeFaster(ArrayList<Integer> list, int target) {
-    return -1;
-  }
+    if (list == null || list.size() == 0) {
+      return -1;
+    }
 
 //Exercise 4
   public int findMeFaster(String[] list, String target) {
