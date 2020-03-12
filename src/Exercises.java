@@ -64,6 +64,13 @@ public class Exercises {
       return -1;
     }
 
+    boolean isFound = false;
+    int start = 0;
+    int end = list.length;
+
+    while (!isFound) {
+      int midpoint = (start + end) / 2;
+
     
 //Exercise 5
   public int[] bubble(int[] list, boolean ascending) {
