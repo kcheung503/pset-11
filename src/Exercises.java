@@ -60,9 +60,11 @@ public class Exercises {
 
 //Exercise 4
   public int findMeFaster(String[] list, String target) {
-    return -1;
-  }
+    if (list == null || list.length == 0 || target == null) {
+      return -1;
+    }
 
+    
 //Exercise 5
   public int[] bubble(int[] list, boolean ascending) {
     return null;
