@@ -121,8 +121,22 @@ public class Exercises {
 
 //Exercise 6
   public ArrayList<String> bubble(ArrayList<String> list, boolean ascending) {
-    return null;
-  }
+    if (list == null || list.size() == 0) {
+      return null;
+    }
+
+    ArrayList<String> arr = list;
+
+    if (ascending) {
+      for (int i = 0; i < arr.size() -1; i++) {
+        for (int j = 0; j < arr.size() - 1 - i; j++) {
+          if (arr.get(j).compareTo(arr.get(j+1)) > 0) {
+            String temp = arr.get(j);
+            arr.set(j, arr.get(j+1));
+            arr.set(j+1, temp);
+          }
+        }
+      }   
 
 //Exercise 7
   public ArrayList<Integer> insertion(ArrayList<Integer> list, boolean ascending) {
