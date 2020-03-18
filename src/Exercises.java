@@ -154,8 +154,32 @@ public class Exercises {
 
 //Exercise 7
   public ArrayList<Integer> insertion(ArrayList<Integer> list, boolean ascending) {
-    return null;
-  }
+    if (list == null || list.size() == 0) {
+      return null;
+    }
+
+    ArrayList<Integer> arr = list;
+
+    if (ascending) {
+      for (int i = 1; i < arr.size(); i++) {
+        boolean isSorted = false;
+
+        while (!isSorted) {
+          for (int j = i; j >= 0; j--) {
+            if (arr.get(i) < arr.get(j)) {
+              int saved = arr.get(i);
+              for (int k = i-1; k > j; k--) {
+                int temp = arr.get(k);
+                arr.set(k, arr.get(k-1));
+                arr.set(k+1, temp);
+              }
+              arr.set(j, saved);
+              isSorted = true;
+              break;
+            }
+          }
+        }
+      }
 
 //Exercise 8
   public String[] insertion(String[] list, boolean ascending) {
