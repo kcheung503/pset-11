@@ -136,7 +136,21 @@ public class Exercises {
             arr.set(j+1, temp);
           }
         }
-      }   
+      }
+    } else if (!ascending) {
+          for (int i = arr.size(); i > 1; i--) {
+            for (int j = arr.size(); j > i - 1; j--) {
+              if (arr.get(j).compareTo(arr.get(j-1)) > 0) {
+                String temp = arr.get(j);
+                arr.set(j, arr.get(j - 1));
+                arr.set(j - 1, temp);
+              }
+            }
+          }
+        }
+
+        return arr;
+      }
 
 //Exercise 7
   public ArrayList<Integer> insertion(ArrayList<Integer> list, boolean ascending) {
