@@ -299,8 +299,25 @@ public class Exercises {
 
 //Exercise 10
   public ArrayList<String> selection(ArrayList<String> list, boolean ascending) {
-    return null;
-  }
+    if (list == null || list.size() == 0) {
+      return null;
+    }
+
+    ArrayList<String> arr = list;
+
+    if (ascending) {
+      for (int i = 0; i < arr.size(); i++) {
+        int marker = i;
+        int min = i;
+        for (int j = i + 1; j < arr.size(); j++) {
+          if (arr.get(j).compareTo(arr.get(min)) < 0) {
+            min = j;
+          }
+        }
+        temp = arr.get(min);
+        arr.set(min, arr.get(i));
+        arr.set(i, temp);
+      }
 
 //Exercise 11
   public ArrayList<Integer> merge(ArrayList<Integer> list, boolean ascending) {
