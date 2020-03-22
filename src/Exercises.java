@@ -204,11 +204,12 @@ public class Exercises {
 
         return null;
       }
-      
+
 //Exercise 8
   public String[] insertion(String[] list, boolean ascending) {
-    return null;
-  }
+    if (list == null || list.length == 0) {
+      return null;
+    }
 
 //Exercise 9
   public int[] selection(int[] list, boolean ascending) {
@@ -225,7 +226,7 @@ public class Exercises {
     return null;
   }
 
-//Exercise 12nigger
+//Exercise 12
   public String[] merge(String[] list, boolean ascending) {
     return null;
   }
