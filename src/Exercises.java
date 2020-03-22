@@ -279,6 +279,23 @@ public class Exercises {
         arr[min] = arr[i];
         arr[i] = temp;
       }
+    } else if (!ascending) {
+    for (int i = 0; i < arr.length; i++) {
+      int marker = i;
+      int max = i;
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[j] > arr[max]) {
+          max = j;
+        }
+      }
+      temp = arr[max];
+      arr[max] = arr[i];
+      arr[i] = temp;
+    }
+  }
+
+  return null;
+}
 
 //Exercise 10
   public ArrayList<String> selection(ArrayList<String> list, boolean ascending) {
