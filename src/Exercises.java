@@ -318,7 +318,24 @@ public class Exercises {
         arr.set(min, arr.get(i));
         arr.set(i, temp);
       }
+    } else if (!ascending) {
+          for (int i = 0; i < arr.size(); i++) {
+            int marker = i;
+            int max = i;
+            for (int j = i + 1; j < arr.size(); j++) {
+              if (arr.get(j).compareTo(arr.get(max)) > 0) {
+                max = j;
+              }
+            }
+            temp = arr.get(max);
+            arr.set(max, arr.get(i));
+            arr.set(i, temp);
+          }
+        }
 
+        return null;
+      }
+      
 //Exercise 11
   public ArrayList<Integer> merge(ArrayList<Integer> list, boolean ascending) {
     return null;
