@@ -211,6 +211,29 @@ public class Exercises {
       return null;
     }
 
+    String[] arr = list;
+
+    if (ascending) {
+      for (int i = 1; i < arr.length; i++) {
+        boolean isSorted = false;
+
+        while (!isSorted) {
+          for (int j = i; j >= 0; j--) {
+            if (arr[i].compareTo(arr[j]) < 0) {
+              int saved = arr[i];
+              for (int k = i - 1; k > j; k--) {
+                int temp = arr[k];
+                arr[k] = arr[k-1];
+                arr[k+1] = temp;
+              }
+              arr[j] = saved;
+              isSorted = true;
+              break;
+            }
+          }
+        }
+      }
+      
 //Exercise 9
   public int[] selection(int[] list, boolean ascending) {
     return null;
